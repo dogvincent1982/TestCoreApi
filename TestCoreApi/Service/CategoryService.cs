@@ -12,7 +12,7 @@ namespace TestCoreApi.Service
     public class CategoryService : ICategoryService
     {
         private ICategoryAccessor _categoryAccessor;
-        public CategoryService(ICategoryAccessor categoryAccessor,)
+        public CategoryService(ICategoryAccessor categoryAccessor)
         {
             _categoryAccessor = categoryAccessor;
         }

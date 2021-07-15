@@ -7,6 +7,6 @@ namespace TestCoreApi.Models
         public int PageIndex { get; set; }
         public int PageSize { get; set; }
         public long TotalCount { get; set; }
-        public IEnumerable<T> Data { get; set; }
+        public IEnumerable<T> Result { get; set; }
     }
 }

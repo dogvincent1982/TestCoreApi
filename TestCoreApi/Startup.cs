@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using TestCoreApi.Accessor;
 using TestCoreApi.Accessor.Interface;
 using TestCoreApi.Context;
+using TestCoreApi.Middleware;
 using TestCoreApi.Service;
 using TestCoreApi.Service.Interface;
 
@@ -54,6 +55,8 @@ namespace TestCoreApi
             {
                 endpoints.MapControllers();
             });
+
+            app.UseMiddleware<ExceptionMiddleware>();
         }
     }
 }
