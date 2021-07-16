@@ -15,5 +15,10 @@
     <PackageReference Include="NLog.Web.AspNetCore" Version="4.13.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\ConfigOption\" />
+    <Folder Include="Consts\" />
+  </ItemGroup>
+
 
 </Project>
