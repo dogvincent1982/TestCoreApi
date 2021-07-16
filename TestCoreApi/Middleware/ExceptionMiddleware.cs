@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using NLog;
 using System;
 using System.Threading.Tasks;
 using TestCoreApi.Models;
@@ -23,6 +25,7 @@ namespace TestCoreApi.Middleware
             }
             catch (Exception ex)
             {
+                LogManager.GetLogger("ExceptionMiddleware").Error(ex);
                 await context.Response.WriteAsync(
                     JsonConvert.ToString(
                         new ApiResponse<object>(Enums.StatusCode.UnknowError, "Unknow Error")));
